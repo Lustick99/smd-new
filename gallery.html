@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Saveurs du Monde </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Thilander (CDN inline) -->
+  <link href="https://cdn.jsdelivr.net/npm/thilandercss@latest/dist/thilander.min.css" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="styles/styles.scss" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Police Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Meta Tags SEO -->
+  <meta name="description"
+    content="Découvrez les saveurs du monde avec nos recettes de repas, pâtisseries et boissons. Explorez la cuisine internationale à travers des plats savoureux et authentiques." />
+  <meta name="keywords" content="recettes, repas, pâtisseries, boissons, cuisine internationale, saveurs du monde" />
+  <meta name="author" content="Votre Nom ou Entreprise" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Saveurs du Monde" />
+  <meta property="og:description"
+    content="Découvrez les saveurs du monde avec nos recettes de repas, pâtisseries et boissons. Explorez la cuisine internationale à travers des plats savoureux et authentiques." />
+  <meta property="og:image" content="images/thumbnail.jpg" />
+  <meta property="og:url" content="https://votre-site.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saveurs du Monde" />
+  <meta name="twitter:description"
+    content="Découvrez les saveurs du monde avec nos recettes de repas, pâtisseries et boissons. Explorez la cuisine internationale à travers des plats savoureux et authentiques." />
+  <meta name="twitter:image" content="images/thumbnail.jpg" />
+  <meta name="twitter:site" content="@votrecompte" />
+  <meta name="twitter:creator" content="@votrecompte" />
+  <!-- <link rel="canonical" href="https://votre-site.com" />
+  <link rel="alternate" href="https://votre-site.com" hreflang="fr" />
+  <link rel="alternate" href="https://votre-site.com/en" hreflang="en" /> -->
+
+  <!-- Bibliothèques JavaScript (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/thilandercss@latest/dist/thilander.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:contact@example.com">contact@saveursdumonde.tg</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+228 99 009 900</span></i>
+        </div>
+        <div class="languages d-none d-md-flex align-items-center">
+          <ul>
+            <li>Fr</li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">SDM</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="active">Accueil<br></a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="news.html">Nouveautés</a></li>
+            <li><a href="events.html">Events</a></li>
+            <!-- <li><a href="chefs.html">Chefs</a></li> -->
+            <li><a href="gallery.html">Gallerie</a></li>
+            <li class="dropdown"><a href="#"><span>Rayons</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#"> Repas chaud & sandwiches </a></li>
+                <li><a href="#"> Pâtisserie </a></li>
+                <li><a href="#"> Boulangerie </a></li>
+                <li><a href="#"> Confiserie </a></li>
+                <li><a href="#"> Salon de thé </a></li>
+                <li><a href="#"> Glaces </a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-book-a-table d-none d-xl-block" href="#book-a-table"> Reserver une Table </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/images/header-bg-1.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100"> Gallerie de <span> Saveurs du Monde </span></h2>
+            <p data-aos="fade-up" data-aos-delay="200">
+              Bienvenue dans notre gallerie, où nous célébrons la diversité culinaire à travers des images de nos
+              plats, pâtisseries et boissons. Explorez les saveurs du monde avec nous !
+            </p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="menu.html" class="cta-btn">Notre Menu</a>
+              <a href="menu.html#book-a-table" class="cta-btn">Reserver une Table</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p> Découvrez nos locaux et réalisations </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/chclt.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/chclt.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal2.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal3.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal4.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal5.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal6.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal7.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/galeries/gal8.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/galeries/gal8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Retours Clients</h2>
+        <p>
+          Ce que nos clients disent de nous
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000"
+          data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" "="">
+            <p>
+              <i class=" bi bi-quote quote-icon-left"></i>
+                <span>
+                  Saveurs du Monde est une véritable découverte ! Chaque produit raconte une histoire et les saveurs
+                  sont
+                  authentiques. Je recommande vivement cette épicerie fine à tous les amateurs de gastronomie.
+                </span>
+                <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>
+                  Marc Kodjo
+                </h3>
+                <h4>
+                  Client Régulier
+                </h4>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>
+                    Une expérience unique à chaque visite ! Les produits sont de qualité exceptionnelle et le service
+                    est toujours chaleureux. Saveurs du Monde est devenu mon épicerie préférée pour découvrir de
+                    nouvelles
+                    saveurs.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>
+                  Entrepreneur
+                </h4>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>
+                    Mon anniversaire a été un succès grâce à Saveurs du Monde ! Leur service traiteur a surpassé toutes
+                    mes
+                    attentes. Les plats étaient délicieux et magnifiquement présentés. Je recommande vivement leurs
+                    services pour toute occasion spéciale.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>
+                  Linda DeSouza
+                </h3>
+                <h4>
+                  Estheticienne
+                </h4>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>
+                    Une épicerie fine qui mérite d'être connue ! Les produits sont soigneusement sélectionnés et la
+                    qualité est au rendez-vous. J'ai découvert des saveurs incroyables et le personnel est toujours
+                    prêt à partager ses recommandations.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4> Touriste </h4>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>
+                    Saveurs du Monde a transformé ma façon de cuisiner ! Leurs produits sont d'une qualité
+                    exceptionnelle
+                    et j'adore découvrir de nouvelles recettes inspirées des cuisines du monde entier. C'est un
+                    véritable
+                    voyage culinaire à chaque visite.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>
+                  Ulrich Agode
+                </h3>
+                <h4>
+                  Cuisinier Autodidacte
+                </h4>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Saveurs du Monde</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p> Rue de l'Ocam </p>
+            <p> Lomé - Togo </p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+228 99 009 900</span></p>
+            <p><strong>Email:</strong> <span>contact@saveursdumonde.tg</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Nouveautés</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nos Rayons</h4>
+          <ul>
+            <li><a href="#"> Repas chaud & sandwiches </a></li>
+            <li><a href="#"> Pâtisserie </a></li>
+            <li><a href="#"> Boulangerie </a></li>
+            <li><a href="#"> Confiserie </a></li>
+            <li><a href="#"> Salon de thé </a></li>
+            <li><a href="#"> Glaces </a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Notre Newsletter</h4>
+          <p>
+            Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles et offres spéciales.
+            <br>Entrez votre adresse e-mail ci-dessous pour vous inscrire.
+          </p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Votre abonnement a été confirmé. Merci de vous être inscrit à notre newsletter !
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> 2025 <strong class="px-1 sitename">Saveurs du Monde </strong> <span>All Rights
+          Reserved</span>
+      </p>
+      <div class="credits">
+        Designed by
+        <a href="https://wa.me/22899005006" style="font-size: small;" target="_blank" class="social-link">
+          Lustick
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
